@@ -20,6 +20,9 @@ public class LogPlayerKill extends TelemetryEvent {
     @SerializedName("damageCauserName")
     private String damageCauserName;
 
+    @SerializedName("damageReason")
+    private String damageReason;
+
     @SerializedName("distance")
     private Float distance;
 
@@ -73,5 +76,13 @@ public class LogPlayerKill extends TelemetryEvent {
 
     public void setDistance(Float distance) {
         this.distance = distance;
+    }
+
+    public String getDamageReason() {
+        return damageReason;
+    }
+
+    public void setDamageReason(String damageReason) {
+        this.damageReason = damageReason;
     }
 }

@@ -1,14 +1,11 @@
 package com.github.mautini.pubgjava.model.telemetry.event;
 
-import com.google.gson.annotations.SerializedName;
 import com.github.mautini.pubgjava.model.telemetry.object.Common;
+import com.google.gson.annotations.SerializedName;
 
 import java.time.ZonedDateTime;
 
 public abstract class TelemetryEvent {
-
-    @SerializedName("_V")
-    private Integer version;
 
     @SerializedName("_D")
     private ZonedDateTime timestamp;
@@ -16,18 +13,9 @@ public abstract class TelemetryEvent {
     @SerializedName("_T")
     private String type;
 
-    // PC Only
     private Common common;
 
     public TelemetryEvent() {
-    }
-
-    public Integer getVersion() {
-        return version;
-    }
-
-    public void setVersion(Integer version) {
-        this.version = version;
     }
 
     public ZonedDateTime getTimestamp() {
